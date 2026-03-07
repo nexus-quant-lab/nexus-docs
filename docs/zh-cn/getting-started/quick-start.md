@@ -14,3 +14,38 @@
 
 1. [安装部署](/zh-cn/registeration/registration)
 2. [交易所设置](/zh-cn/exchange-setup)
+
+## 支持的交易所
+
+### 中心化交易所 (CEX)
+
+| 交易所 | 现货 | 合约 | 测试网 |
+|--------|------|------|--------|
+| [Binance](/zh-cn/cex/binance) | ✓ | ✓ | ✓ |
+| [Bybit](/zh-cn/cex/bybit) | ✓ | ✓ | ✓ |
+| [OKX](/zh-cn/cex/okx) | ✓ | ✓ | ✓ |
+| [MEXC](/zh-cn/cex/mexc) | ✓ | ✓ | ✓ |
+| [HTX](/zh-cn/cex/htx) | ✓ | ✓ | ✓ |
+| [KuCoin](/zh-cn/cex/kucoin) | ✓ | ✓ | ✓ |
+| [Gate](/zh-cn/cex/gate) | ✓ | ✓ | ✓ |
+| [Bitget](/zh-cn/cex/bitget) | ✓ | ✓ | ✓ |
+| [Coinbase](/zh-cn/cex/coinbase) | ✓ | - | - |
+| [Alpaca](/zh-cn/cex/alpaca) | ✓ | - | ✓ |
+| [Maicoin Max](/zh-cn/cex/max) | ✓ | - | - |
+| [BitoPro](/zh-cn/cex/bitopro) | ✓ | - | - |
+| [Shiaoji (Sino)](/zh-cn/cex/shiaoji) | ✓ | - | - |
+
+### 去中心化交易所 (DEX)
+
+| 交易所 | 永续 | 测试网 |
+|--------|------|--------|
+| [Lighter](/zh-cn/dex/lighter) | ✓ | ✓ |
+| [dYdX](/zh-cn/dex/standx) | ✓ | - |
+| [Drift](/zh-cn/dex/extended) | ✓ | - |
+| [Pacifica](/zh-cn/dex/pacifica) | ✓ | - |
+| [ParaSwap](/zh-cn/dex/paradex) | 闪兑 | - |
+| [Aster](/zh-cn/dex/aster) | ✓ | - |
+| [Hyperliquid](/zh-cn/dex/hyperliquid) | ✓ | - |
+| [Apex Omni](/zh-cn/dex/apex-omni) | ✓ | - |
+| [BloFin](/zh-cn/dex/blofin) | ✓ | - |
+| [Backpack](/zh-cn/dex/backpack) | ✓ | - |

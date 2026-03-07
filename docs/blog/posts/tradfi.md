@@ -1,0 +1,17 @@
+XAU - gold
+XAG - silver
+XPT - 鉑金
+XBR - 布蘭特原油
+XTI - WTI oil 
+
+USD500
+NAS100
+UK100
+HK50
+US30
+JPN225
+TW88
+
+NFLX
+NVDA
+MSFT

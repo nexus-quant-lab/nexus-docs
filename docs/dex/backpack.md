@@ -1,23 +1,34 @@
-# ubackpack Setup
+# Backpack Setup
 
-Instructions for setting up backpack API.
+Instructions for setting up Backpack DEX.
 
-## API Setup Steps
+## Referral
 
-1. Log in to your backpack account
-2. Go to API Management
-3. Create a new API key
-4. Set appropriate permissions
-5. Add your IP to the whitelist
+If you are new to Backpack, and register your account using my referral link.
+You will get trading fee discount.
 
-## Configuration
+* Click to register: {{REFERRAL_LINK}}
 
-Configure the following settings:
-- API Key
-- API Secret
-- Passphrase (if required)
+## Production
+
+Backpack is a decentralized exchange for trading.
+
+### Wallet Connection
+
+Connect your wallet and configure the DEX settings.
+
+### API Keys
+
+Generate API keys from the Backpack interface for programmatic trading.
+
+------------------------------------------------------------------------
+
+## Notes & Best Practices
+
+-   DEX trading involves smart contract risk --- ensure you understand the risks.
+-   Never expose your private key in code repositories.
+-   Backpack does not offer a public testnet for API trading.
 
 ::: warning
-Do not enable withdrawal permissions for API keys.
+DEX trading involves high risk. Make sure you understand the risks.
 :::
-

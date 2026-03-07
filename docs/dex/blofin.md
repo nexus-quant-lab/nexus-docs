@@ -1,12 +1,34 @@
-# uokx dex Setup
+# BloFin Setup
 
-Instructions for setting up uokx dex.
+Instructions for setting up BloFin perpetual DEX.
 
-## Configuration
+## Referral
 
-Add your wallet and configure the DEX settings.
+If you are new to BloFin, and register your account using my referral link.
+You will get trading fee discount.
+
+* Click to register: {{REFERRAL_LINK}}
+
+## Production
+
+BloFin is a decentralized exchange for trading perpetual contracts.
+
+### Wallet Connection
+
+Connect your wallet and configure the perp DEX settings.
+
+### API Keys
+
+Generate API keys from the BloFin interface for programmatic trading.
+
+------------------------------------------------------------------------
+
+## Notes & Best Practices
+
+-   DEX trading involves smart contract risk --- ensure you understand the risks.
+-   Never expose your private key in code repositories.
+-   BloFin does not offer a public testnet for API trading.
 
 ::: warning
-Always verify contract addresses before trading.
+Perpetual trading involves high risk. Make sure you understand the risks.
 :::
-
