@@ -26,6 +26,7 @@
 | [OKX](/zh-tw/cex/okx)                | ✓    |  ✓      | ✓   | ✓     |
 | [Gate](/zh-tw/cex/gate)              | ✓    |  ✓      | ✓   | ✓     |
 | [Bitget](/zh-tw/cex/bitget)          | ✓    |  ✓      | ✓   | ✓     |
+| [Pionex](/zh-tw/cex/pionex)          | ✓    |  -      | -   | -     |
 | [MEXC](/zh-tw/cex/mexc)              | ✓    |  ✓      | ✓   | ✓     |
 | [HTX](/zh-tw/cex/htx)                | ✓    |  ✓      | ✓   | ✓     |
 | [KuCoin](/zh-tw/cex/kucoin)          | ✓    |  ✓      | ✓   | ✓     |
