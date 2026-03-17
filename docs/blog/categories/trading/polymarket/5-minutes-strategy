@@ -1,0 +1,95 @@
+# Unlocking Edges in Polymarket’s 5-Minute Crypto Markets: Last-Second Dynamics, Bot Strategies, and Profitable Trading
+Benjamin-Cup (Feb 20, 2026)
+
+https://medium.com/@benjamin.bigdev/unlocking-edges-in-polymarkets-5-minute-crypto-markets-last-second-dynamics-bot-strategies-and-db8efcb5c196
+
+# High-ROI Polymarket Arbitrage in 2026: Programmatic Dutch-Book Strategies, Bots, and Portfolio Optimization Explained
+Benjamin-Cup (Feb 14, 2026)
+
+https://medium.com/@benjamin.bigdev/high-roi-polymarket-arbitrage-in-2026-programmatic-dutch-book-strategies-bots-and-portfolio-41372221bb79
+
+# Inside the Mind of a Polymarket BOT
+
+https://coinsbench.com/inside-the-mind-of-a-polymarket-bot-3184e9481f0a
+
+## The Strategy: Turning Price Movement Into a Guaranteed Payout
+He buys:
+- YES when YES becomes unusually cheap.
+- NO when NO becomes unusually cheap.
+
+His entire objective is to reach this simple condition: Keep the average cost of YES + the average cost of NO < $1.00
+
+# OctoBot-Prediction-Market
+Github opensource: https://github.com/Drakkar-Software/OctoBot-Prediction-Market
+
+
+
+---
+  交易规则（中文说明）
+
+  核心策略
+
+  同时买入同一市场的「涨（UP/YES）」和「跌（DOWN/NO）」两边。
+  由于结算时必有一边价值 $1.00，另一边 $0.00，
+  只要两边的平均成本之和 < $1.00，无论结果如何都保证盈利。
+
+  ---
+  关键参数（默认值）
+
+  ┌────────────────────────┬────────┬──────────────────────────────────────────────────────┐
+  │          参数          │ 默认值 │                         含义                         │
+  ├────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+  │ CHEAP_THRESHOLD        │ $0.48  │ 某一边的卖价必须 ≤ 0.48 才考虑买入                   │
+  ├────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+  │ PAIR_COST_THRESHOLD    │ $0.99  │ 买入后模拟的组合成本（avg_UP + avg_DOWN）必须 ≤ 0.99 │
+  ├────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+  │ MIN_IMPROVEMENT        │ 0.001  │ 买入后组合成本必须比现在至少降低 0.001               │
+  ├────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+  │ ORDER_SIZE_USDC        │ $10    │ 每次下单金额                                         │
+  ├────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+  │ MAX_POSITION_USDC      │ $500   │ 每个市场每窗口最大总投入                             │
+  ├────────────────────────┼────────┼──────────────────────────────────────────────────────┤
+  │ ONE_SIDE_PROFIT_TARGET │ $0.20  │ 单边持仓浮盈 ≥ $0.20 时直接卖出                      │
+  └────────────────────────┴────────┴──────────────────────────────────────────────────────┘
+
+  ---
+  买入决策流程（每 5 秒执行一次）
+
+  第1步：检查利润是否已锁定
+      若 min(涨数量, 跌数量) > (涨成本 + 跌成本) → 停止交易，利润已锁定
+
+  第2步：检查单边止盈
+      若只持有一边，且浮盈 ≥ $0.20 → 市价卖出，跳过本轮窗口
+
+  第3步：检查资金上限
+      若已投入 ≥ $500 → 不再开仓
+
+  第4步：判断是否便宜（← 你的55美分就在这里被拦截）
+      UP卖价 ≤ 0.48 → 模拟买入，计算新组合成本
+      DOWN卖价 ≤ 0.48 → 模拟买入，计算新组合成本
+
+  第5步：检查组合成本是否改善
+      新组合成本 ≤ 0.99 AND 改善幅度 ≥ 0.001 → 触发买入
+
+  第6步：如果两边都符合条件 → 选择让组合成本更低的那边买入
+
+  ---
+  为什么 55 美分（$0.55）不会触发买入？
+
+  原因很简单：0.55 > CHEAP_THRESHOLD（0.48）
+
+  strategy.py 第 164 行：
+  if yes_ask > 0 and yes_ask <= config.CHEAP_THRESHOLD:  # 0.55 > 0.48 → 条件不成立
+
+  价格必须跌到 ≤ $0.48 才会进入后续的组合成本计算。
+
+  $0.55 的含义是：市场认为涨/跌的概率约为 55%，定价"正常"，没有明显低估，bot 不会在这里买入。
+  bot 等待的是市场情绪极端时（比如跌到 $0.20～$0.40 这种非理性价格），才会进场收集便宜筹码。
+
+  ---
+  如果你想调低门槛，在 .env 里修改：
+
+  CHEAP_THRESHOLD=0.55   # 允许买入 55 美分以下的标的
+  PAIR_COST_THRESHOLD=0.99  # 组合成本上限保持不变
+
+  但要注意：门槛越高，买入越频繁，组合成本也越难压到 $0.99 以下，锁定利润的概率会降低。

@@ -10,9 +10,14 @@ month free subscription.
 
 * Click to register: {{REFERRAL_LINK}}
 
+Note: 
+- classic account type is supported
+- unified account type is not supported
+
 ## 1. Production
 
 These are real API keys used for live trading in Spot and Futures accounts.
+
 
 ### Steps:
 

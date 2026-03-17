@@ -36,6 +36,26 @@
 | [BitoPro](/zh-tw/cex/bitopro)        | ✓    |  -      | -   | -     |
 | [Shiaoji (Sino)](/zh-tw/cex/shiaoji) | ✓    |  -      | -   | -     |
 
+
+測試結果
+
+| 交易所                                | 現貨  | 現貨槓桿 | 合約 | 測試網 |
+|--------------------------------------|------|---------|-----|-------|
+| [Binance](/zh-tw/cex/binance)        | ✓    |  ✓      | ✓   | ✓     |
+| [Bybit](/zh-tw/cex/bybit)            | ✓    |  ✓      | ✓   | ✓     |
+| [OKX](/zh-tw/cex/okx)                | ✓    |  ✓     | ✓   | ✓     |
+| [Gate](/zh-tw/cex/gate)              | ✓    |  ✓ unified + cross  | ✓   | ✓     |
+| [Bitget](/zh-tw/cex/bitget)          | ✓    |  ✓ classic + cross  | ✓   | ✓     |
+| [Pionex](/zh-tw/cex/pionex)          | ✓    |  ✓     | -   | -     |
+| [MEXC](/zh-tw/cex/mexc)              | ✓    |  🔴      | ✓   | ✓     |
+| [HTX](/zh-tw/cex/htx)                | ✓    |  🔴      | ✓   | ✓     |
+| [KuCoin](/zh-tw/cex/kucoin)          | ✓    |  🔴      | ✓   | ✓     |
+| [Coinbase](/zh-tw/cex/coinbase)      | ✓    |  🔴      | -   | -     |
+| [Alpaca](/zh-tw/cex/alpaca)          | ✓    |  🔴      | -   | ✓     |
+| [Maicoin Max](/zh-tw/cex/max)        | ✓    |  -      | -   | -     |
+| [BitoPro](/zh-tw/cex/bitopro)        | ✓    |  -      | -   | -     |
+| [Shiaoji (Sino)](/zh-tw/cex/shiaoji) | ✓    |  -      | -   | -     |
+
 ### 去中心化交易所 (DEX)
 
 | 交易所 | 永續 | 測試網 |

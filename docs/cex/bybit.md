@@ -54,6 +54,11 @@ Bybit Testnet simulates trading using virtual funds.
 -   Testnet keys only work with testnet trading.
 -   Never expose API Secret in code repositories.
 
+### Spot Margin Account
+1. Unified Trading Account (UTA): only support Unified Trading Account.
+2. Enable Spot Margin First: You must have manually enabled Spot Margin in the Bybit web/app interface (and passed the quiz) before the API will accept this command.
+3. Global Setting: Unlike Futures, where you set leverage per pair (e.g., BTC/USDT), this setting on Bybit is account-wide for your spot margin activities.
+
 ::: warning
 Do not enable withdrawal permissions for API keys.
 :::

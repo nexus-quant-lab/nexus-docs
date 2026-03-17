@@ -1,0 +1,9 @@
+## Installation
+https://claude.com/product/claude-code
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+### /terminal-setup
+

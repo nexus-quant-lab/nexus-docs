@@ -1,0 +1,105 @@
+# NotebookLM + Claude Code : save token & high planning quality
+https://youtu.be/wSG21uomtwc?si=_-G_3KirsVsaTVWM
+
+这个工作流的真正价值在于，它能将分散的文档、复杂的UI研究和技术规范，转化为Claude Code可以精确遵循的具体指令。从而自动编写出高质量且符合最新标准的前端代码，极大提升开发效率。
+
+此外，NotebookLM还能深入分析代码仓库的文档，并自动为团队生成专业的讲解视频，方便培训新成员。我们只需在终端中发出清晰的指令，为仓库文档创建笔记，深入总结核心架构，并最终生成一个视频风格的讲解。
+
+这个强大工作流能做的事情还远不止这些。从深度研究与发现到智能内容添加，再到AI驱动的精准分析和自动化内容生成，应用场景已覆盖开发的方方面面。
+
+我们强烈推荐您尝试这个理想的开发工作流。作为完全免费的工具，NotebookLM与Claude Code结合能极大减轻大模型在规划阶段的负担，
+同时利用Gemini免费进行前期深入研究，实现成本与效率的最佳平衡。
+
+
+
+## NotebookLM CLI & MCP Server
+Github: https://github.com/jacob-bd/notebooklm-mcp-cli
+
+### Install as a local MCP server
+MCP Server (for AI Agents)
+Connect AI assistants (Claude, Gemini, Cursor, etc.) to NotebookLM:
+
+### MCP server CLI 
+#### Automatic setup — picks the right config for each tool
+```
+nlm setup add claude-code
+nlm setup add gemini
+nlm setup add cursor
+nlm setup add cline
+nlm setup add antigravity
+```
+
+#### Generate JSON config for any other tool
+```
+nlm setup add json
+```
+
+Then use natural language: "Create a notebook about quantum computing and generate a podcast"
+
+## Authentication
+```bash
+nlm login              # Auto mode (launches browser)
+```
+
+## MCP Configuration
+```bash
+nlm setup add claude-code
+
+Claude Code — Adding NotebookLM MCP
+
+✓ Added to Claude Code (user scope)
+
+Restart Claude Code to activate the MCP server.
+```
+
+After restart claude code, use `/mcp` to verify installation
+
+## Remove from a tool
+```
+nlm setup remove claude-code
+```
+
+Note: Please visit notebooklm.google.com to see the generated notebook !
+
+## Usage / What You Can Do
+Simply chat with your AI tool (Claude Code, Cursor, Gemini CLI) using natural language. Here are some examples:
+
+### Research & Discovery
+"List all my NotebookLM notebooks"
+"Create a new notebook called 'AI Strategy Research'"
+"Start web research on 'enterprise AI ROI metrics' and show me what sources it finds"
+"Do a deep research on 'cloud marketplace trends' and import the top 10 sources"
+"Search my Google Drive for documents about 'product roadmap' and create a notebook"
+
+### Adding Content
+"Add this URL to my notebook: https://example.com/article"
+"Add this YouTube video about Kubernetes to the notebook"
+"Add my meeting notes as a text source to this notebook"
+"Import this Google Doc into my research notebook"
+### AI-Powered Analysis
+"What are the key findings in this notebook?"
+"Summarize the main arguments across all these sources"
+"What does this source say about security best practices?"
+"Get an AI summary of what this notebook is about"
+"Configure the chat to use a learning guide style with longer responses"
+### Content Generation
+"Create an audio podcast overview of this notebook in deep dive format"
+"Generate a video explainer with classic visual style"
+"Make a briefing doc from these sources"
+"Create flashcards for studying, medium difficulty"
+"Generate an infographic in landscape orientation with professional style"
+"Build a mind map from my research sources"
+"Create a slide deck presentation from this notebook"
+### Smart Management
+"Check which Google Drive sources are out of date and sync them"
+"Show me all the sources in this notebook with their freshness status"
+"Delete this source from the notebook"
+"Check the status of my audio overview generation"
+### Sharing & Collaboration
+"Show me the sharing settings for this notebook"
+"Make this notebook public so anyone with the link can view it"
+"Disable public access to this notebook"
+"Invite user@example.com as an editor to this notebook"
+"Add a viewer to my research notebook"
+
+### Pro tip: After creating studio content (audio, video, reports, etc.), poll the status to get download URLs when generation completes.
