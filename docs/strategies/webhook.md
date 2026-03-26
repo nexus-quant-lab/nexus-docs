@@ -75,6 +75,8 @@ The alert message must be valid JSON with the following format:
 | `quantity` | No | Order quantity. Omit for `close` action |
 | `price` | No | Required if `order_type` is `limit` |
 
+<div v-pre>
+
 ## Using Pine Script Variables
 
 You can use TradingView Pine Script variables in the alert message to create dynamic signals:
@@ -100,8 +102,10 @@ You can use TradingView Pine Script variables in the alert message to create dyn
 | `{{time}}` | Alert trigger time |
 | `{{strategy.position_size}}` | Current position size |
 
+</div>
+
 ::: tip
-Make sure the `symbol` format matches what NexusQuant expects. For example, use `BTC/USDT` not `BTCUSDT`. You may need to format the `{{ticker}}` variable accordingly.
+Make sure the `symbol` format matches what NexusQuant expects. For example, use `BTC/USDT` not `BTCUSDT`. You may need to format the <code v-pre>{{ticker}}</code> variable accordingly.
 :::
 
 ## Security

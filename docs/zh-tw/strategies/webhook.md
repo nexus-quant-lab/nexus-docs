@@ -75,6 +75,8 @@
 | `quantity` | 否 | 訂單數量，`close` 動作可省略 |
 | `price` | 否 | `order_type` 為 `limit` 時必填 |
 
+<div v-pre>
+
 ## 搭配 Pine Script 變數
 
 你可以在警報訊息中使用 TradingView Pine Script 變數來建立動態訊號：
@@ -100,8 +102,10 @@
 | `{{time}}` | 警報觸發時間 |
 | `{{strategy.position_size}}` | 目前持倉大小 |
 
+</div>
+
 ::: tip
-請確認 `symbol` 格式與 NexusQuant 要求的一致。例如使用 `BTC/USDT` 而非 `BTCUSDT`。你可能需要調整 `{{ticker}}` 變數的格式。
+請確認 `symbol` 格式與 NexusQuant 要求的一致。例如使用 `BTC/USDT` 而非 `BTCUSDT`。你可能需要調整 <code v-pre>{{ticker}}</code> 變數的格式。
 :::
 
 ## 安全機制

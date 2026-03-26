@@ -56,7 +56,12 @@ Set up a webhook alert in TradingView pointing to your NexusQuant webhook URL, w
 See the [full payload reference](/strategies/webhook#payload-fields).
 
 ### Can I use Pine Script variables in webhook alerts?
+<!-- v-pre needed to prevent Vue from parsing curly braces -->
+<div v-pre>
+
 Yes. Use placeholders like `{{strategy.order.action}}`, `{{ticker}}`, and `{{strategy.order.contracts}}`. See the [Pine Script section](/strategies/webhook#using-pine-script-variables).
+
+</div>
 
 ## Troubleshooting
 

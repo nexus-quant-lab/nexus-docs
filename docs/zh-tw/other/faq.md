@@ -56,7 +56,11 @@ ahr999 衡量比特幣的相對價值。數值低（< 0.45）代表便宜，應�
 完整欄位說明請見 [Webhook 指南](/zh-tw/strategies/webhook#欄位說明)。
 
 ### 可以在 Webhook 中使用 Pine Script 變數嗎？
+<div v-pre>
+
 可以。使用 `{{strategy.order.action}}`、`{{ticker}}`、`{{strategy.order.contracts}}` 等佔位符。詳見 [Pine Script 章節](/zh-tw/strategies/webhook#搭配-pine-script-變數)。
+
+</div>
 
 ## 疑難排解
 
