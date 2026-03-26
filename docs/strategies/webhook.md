@@ -17,6 +17,9 @@ Connect your TradingView alerts to NexusQuant and auto-execute trades when your 
 2. Copy your unique Webhook URL (format: `https://api.nexusquant.io/api/v1/webhook/signal`)
 3. Note your **passphrase** (used for security verification)
 
+<!-- TODO: Screenshot — NexusQuant Webhook page showing URL and passphrase -->
+<!-- Save as: docs/public/images/strategies/nexusquant-webhook-url.png -->
+
 ### Step 2: Create a TradingView Alert
 
 1. Open TradingView and set up your chart/indicator
@@ -25,6 +28,12 @@ Connect your TradingView alerts to NexusQuant and auto-execute trades when your 
 4. In the **Notifications** tab, check **Webhook URL**
 5. Paste your NexusQuant webhook URL
 6. In the **Message** field, enter the JSON payload (see below)
+
+<!-- TODO: Screenshot — TradingView alert creation dialog with Webhook URL field -->
+<!-- Save as: docs/public/images/strategies/tradingview-alert-webhook.png -->
+
+<!-- TODO: Screenshot — TradingView alert message field with JSON payload -->
+<!-- Save as: docs/public/images/strategies/tradingview-alert-json.png -->
 
 ### Step 3: Configure the JSON Payload
 

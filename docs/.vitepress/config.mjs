@@ -73,15 +73,15 @@ function makeSidebar (prefix = '') {
         { text: prefix ? (prefix === '/zh-tw' ? '常見問題' : '常见问题') : 'FAQ', link: `${prefix}/other/faq` },
       ],
     },
-    {
-      text: prefix ? (prefix === '/zh-tw' ? '部落格' : '博客') : 'Blog',
-      collapsed: true,
-      items: [
-        { text: prefix ? (prefix === '/zh-tw' ? '所有文章' : '所有文章') : 'All Posts', link: `${prefix}/blog/` },
-        { text: prefix ? (prefix === '/zh-tw' ? '標籤' : '标签') : 'Tags', link: `${prefix}/blog/tags/` },
-        { text: prefix ? (prefix === '/zh-tw' ? '分類' : '分类') : 'Categories', link: `${prefix}/blog/categories/` },
-      ],
-    },
+    // {
+    //   text: prefix ? (prefix === '/zh-tw' ? '部落格' : '博客') : 'Blog',
+    //   collapsed: true,
+    //   items: [
+    //     { text: prefix ? (prefix === '/zh-tw' ? '所有文章' : '所有文章') : 'All Posts', link: `${prefix}/blog/` },
+    //     { text: prefix ? (prefix === '/zh-tw' ? '標籤' : '标签') : 'Tags', link: `${prefix}/blog/tags/` },
+    //     { text: prefix ? (prefix === '/zh-tw' ? '分類' : '分类') : 'Categories', link: `${prefix}/blog/categories/` },
+    //   ],
+    // },
   ]
 }
 
@@ -115,7 +115,6 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Quick Start', link: '/getting-started/quick-start' },
       { text: 'Strategies', link: '/strategies/funding-arbitrage' },
-      { text: 'Blog', link: '/blog/' },
     ],
     sidebar: {
       '/': makeSidebar(),
