@@ -45,7 +45,7 @@ Binance Demo Trading simulates Spot trading using virtual funds.
 
 ### Steps:
 
-1.  Log in to Binance
+1.  Log in to Binance (https://demo.binance.com)
 2.  Enter **Demo Trading** mode (via web/app)
 3.  Go to **API Management** inside Demo Trading
 4.  Click **Create API**
@@ -62,7 +62,7 @@ Demo Futures simulates USDⓈ-M and COIN-M futures trading.
 
 ### Steps:
 
-1.  Log in to Binance Demo Trading
+1.  Log in to Binance Demo Trading (https://www.binance.com)
 2.  Switch to **Futures Demo**
 3.  Go to **API Management**
 4.  Click **Create API**

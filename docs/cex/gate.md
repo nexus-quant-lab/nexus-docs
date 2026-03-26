@@ -46,6 +46,8 @@ Gate Testnet simulates trading using virtual funds.
 6.  Complete 2FA verification
 7.  Save the API Key and Secret
 
+Note: Gate does not support Ondo / xStocks spot (e.g. NVDAX, NVDAON, CIRCX, CIRCON...)
+
 ------------------------------------------------------------------------
 
 ## Notes & Best Practices
