@@ -2,26 +2,28 @@
 layout: home
 
 hero:
-  name: "Nexus Docs"
-  text: "Your Documentation"
-  tagline: Documentation for your project
+  name: "NexusQuant"
+  text: "Multi-Strategy Crypto Trading"
+  tagline: Funding rate arbitrage, TradingView webhook automation, and ahr999 smart DCA — all in one platform.
   actions:
     - theme: brand
       text: Get Started
       link: /getting-started/quick-start
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/your-repo
+      text: Strategy Guides
+      link: /strategies/funding-arbitrage
 
 features:
-  - title: CEX Support
-    details: Support for major centralized exchanges
-  - title: DEX Support
-    details: Support for decentralized exchanges
-  - title: Perp DEX
-    details: Support for perpetual DEX platforms
+  - title: Funding Rate Arbitrage
+    details: Hedge between spot and perpetual contracts to capture low-risk funding rate yields. Auto-monitors rates across exchanges.
+  - title: Webhook Signal Automation
+    details: Connect TradingView alerts to auto-execute trades. Supports passphrase verification and full signal history tracking.
+  - title: Smart DCA (ahr999)
+    details: Data-driven Bitcoin value investing. Automatically adjusts buy amounts based on the ahr999 indicator zones.
+  - title: 9 CEX + 10 DEX Supported
+    details: Binance, OKX, Bybit, Bitget, Hyperliquid, and more. One platform, all your exchanges.
+  - title: Risk Controls Built-in
+    details: Max position limits, slippage protection, emergency stop switch, and IP-whitelisted API key management.
+  - title: Real-time Monitoring
+    details: Live dashboard with portfolio tracking, trade history, strategy performance, and Telegram notifications.
 ---
-
-<style>
-/* Custom styles */
-</style>
