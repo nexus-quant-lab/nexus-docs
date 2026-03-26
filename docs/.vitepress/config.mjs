@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/nexus-docs/',
   title: "Nexus Docs",
   description: "Your Documentation",
   locales: {
