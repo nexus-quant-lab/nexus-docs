@@ -1,51 +1,52 @@
 # Quick Start
 
-Welcome to the quick start guide. This page will help you get up and running quickly.
+Get up and running with NexusQuant in 3 steps.
 
-## Prerequisites
+## Step 1: Create Your Account
 
-Before you begin, make sure you have:
+1. Go to [NexusQuant](https://nexusquant.io) and click **Register**
+2. Enter your email and set a password
+3. Verify your email address
 
-- Node.js 18+ installed
-- A code editor (VS Code recommended)
-- Basic knowledge of command line
+## Step 2: Connect an Exchange
 
-## Next Steps
+1. Navigate to **Settings** → **Exchange Configuration**
+2. Select your exchange (e.g., Binance, OKX, Bybit)
+3. Enter your **API Key** and **Secret**
+4. Click **Save**, then use the `⟳` button to test connectivity
 
-1. [Installation](/registeration/registration)
-2. [Exchange Setup](/exchange-setup)
+::: warning API Key Security
+- **Enable IP whitelist** on the exchange side for your API key
+- **Only enable trading permissions** — never enable withdrawal
+- See [Exchange Setup](/exchange-setup) for detailed per-exchange guides
+:::
 
-## Supported Exchanges
+### Which exchange should I choose?
 
-### Centralized Exchanges (CEX)
+| Use Case | Recommended Exchange |
+|----------|---------------------|
+| Funding Rate Arbitrage | Binance, OKX, Bybit (need futures support) |
+| Webhook Signal Trading | Any exchange with spot/futures |
+| Smart DCA (BTC) | Binance, OKX (good BTC liquidity) |
 
-| Exchange | Spot | Futures | Testnet |
-|---------|------|---------|---------|
-| [Binance](/cex/binance) | ✓ | ✓ | ✓ |
-| [Bybit](/cex/bybit) | ✓ | ✓ | ✓ |
-| [OKX](/cex/okx) | ✓ | ✓ | ✓ |
-| [MEXC](/cex/mexc) | ✓ | ✓ | ✓ |
-| [HTX](/cex/htx) | ✓ | ✓ | ✓ |
-| [KuCoin](/cex/kucoin) | ✓ | ✓ | ✓ |
-| [Gate](/cex/gate) | ✓ | ✓ | ✓ |
-| [Bitget](/cex/bitget) | ✓ | ✓ | ✓ |
-| [Coinbase](/cex/coinbase) | ✓ | - | - |
-| [Alpaca](/cex/alpaca) | ✓ | - | ✓ |
-| [Maicoin Max](/cex/max) | ✓ | - | - |
-| [BitoPro](/cex/bitopro) | ✓ | - | - |
-| [Shiaoji (Sino)](/cex/shiaoji) | ✓ | - | - |
+## Step 3: Choose and Activate a Strategy
 
-### Decentralized Exchanges (DEX)
+NexusQuant offers three core strategies:
 
-| Exchange | Perp | Testnet |
-|----------|------|---------|
-| [Lighter](/dex/lighter) | ✓ | ✓ |
-| [dYdX](/dex/standx) | ✓ | - |
-| [Drift](/dex/extended) | ✓ | - |
-| [Pacifica](/dex/pacifica) | ✓ | - |
-| [ParaSwap](/dex/paradex) | Swap | - |
-| [Aster](/dex/aster) | ✓ | - |
-| [Hyperliquid](/dex/hyperliquid) | ✓ | - |
-| [Apex Omni](/dex/apex-omni) | ✓ | - |
-| [BloFin](/dex/blofin) | ✓ | - |
-| [Backpack](/dex/backpack) | ✓ | - |
+### Funding Rate Arbitrage
+Earn low-risk yields by hedging spot + perpetual positions. Best for stable, passive income.
+→ [Full Guide](/strategies/funding-arbitrage)
+
+### Webhook Signal Automation
+Connect TradingView alerts to auto-execute trades. Best for technical analysis traders.
+→ [Full Guide](/strategies/webhook)
+
+### Smart DCA (ahr999)
+Data-driven Bitcoin value investing using the ahr999 indicator. Best for long-term BTC accumulation.
+→ [Full Guide](/strategies/smart-dca)
+
+## What's Next?
+
+- [Exchange Setup Guides](/exchange-setup) — Detailed API key setup for each exchange
+- [Settings Page](/other/settings-page) — Configure risk controls, notifications, and more
+- [FAQ](/other/faq) — Common questions and troubleshooting

@@ -1,233 +1,136 @@
 import { defineConfig } from 'vitepress'
 
+const cexItems = [
+  { text: 'Binance', link: '/cex/binance' },
+  { text: 'Coinbase', link: '/cex/coinbase' },
+  { text: 'Bybit', link: '/cex/bybit' },
+  { text: 'OKX', link: '/cex/okx' },
+  { text: 'Bitget', link: '/cex/bitget' },
+  { text: 'Gate', link: '/cex/gate' },
+  { text: 'KuCoin', link: '/cex/kucoin' },
+  { text: 'HTX', link: '/cex/htx' },
+  { text: 'MEXC', link: '/cex/mexc' },
+]
+
+const dexItems = [
+  { text: 'Backpack', link: '/dex/backpack' },
+  { text: 'Blofin', link: '/dex/blofin' },
+  { text: 'Hyperliquid', link: '/dex/hyperliquid' },
+  { text: 'Lighter', link: '/dex/lighter' },
+  { text: 'Pacifica', link: '/dex/pacifica' },
+  { text: 'Paradex', link: '/dex/paradex' },
+  { text: 'StandX', link: '/dex/standx' },
+  { text: 'Aster', link: '/dex/aster' },
+  { text: 'Extended', link: '/dex/extended' },
+  { text: 'Apex Omni', link: '/dex/apex-omni' },
+]
+
+function withPrefix (items, prefix) {
+  return items.map(item => ({
+    ...item,
+    link: `${prefix}${item.link}`,
+  }))
+}
+
+function makeSidebar (prefix = '') {
+  return [
+    {
+      text: prefix ? (prefix === '/zh-tw' ? '開始使用' : '开始使用') : 'Getting Started',
+      collapsed: false,
+      items: [
+        { text: prefix ? '快速開始' : 'Quick Start', link: `${prefix}/getting-started/quick-start` },
+        { text: prefix ? (prefix === '/zh-tw' ? '註冊帳號' : '注册账号') : 'Registration', link: `${prefix}/registeration/registration` },
+        { text: prefix ? (prefix === '/zh-tw' ? '交易所設定' : '交易所设定') : 'Exchange Setup', link: `${prefix}/exchange-setup` },
+      ],
+    },
+    {
+      text: prefix ? (prefix === '/zh-tw' ? '策略指南' : '策略指南') : 'Strategy Guides',
+      collapsed: false,
+      items: [
+        { text: prefix ? (prefix === '/zh-tw' ? '資金費率套利' : '资金费率套利') : 'Funding Rate Arbitrage', link: `${prefix}/strategies/funding-arbitrage` },
+        { text: prefix ? 'Webhook' : 'Webhook Signals', link: `${prefix}/strategies/webhook` },
+        { text: prefix ? (prefix === '/zh-tw' ? 'ahr999 智能定投' : 'ahr999 智能定投') : 'Smart DCA (ahr999)', link: `${prefix}/strategies/smart-dca` },
+      ],
+    },
+    {
+      text: 'CEX',
+      collapsed: true,
+      items: prefix ? withPrefix(cexItems, prefix) : cexItems,
+    },
+    {
+      text: 'DEX',
+      collapsed: true,
+      items: prefix ? withPrefix(dexItems, prefix) : dexItems,
+    },
+    {
+      text: prefix ? (prefix === '/zh-tw' ? '其他' : '其他') : 'Other',
+      collapsed: true,
+      items: [
+        { text: prefix ? (prefix === '/zh-tw' ? '設定頁面' : '设置页面') : 'Settings Page', link: `${prefix}/other/settings-page` },
+        { text: prefix ? (prefix === '/zh-tw' ? '交易頁面' : '交易页面') : 'Trading Page', link: `${prefix}/other/trading-page` },
+        { text: prefix ? (prefix === '/zh-tw' ? '下單操作' : '下单操作') : 'Order Operations', link: `${prefix}/other/order-operations` },
+        { text: prefix ? (prefix === '/zh-tw' ? '風險提示' : '风险提示') : 'Risk Warning', link: `${prefix}/other/risk-warning` },
+        { text: prefix ? (prefix === '/zh-tw' ? '常見問題' : '常见问题') : 'FAQ', link: `${prefix}/other/faq` },
+      ],
+    },
+    {
+      text: prefix ? (prefix === '/zh-tw' ? '部落格' : '博客') : 'Blog',
+      collapsed: true,
+      items: [
+        { text: prefix ? (prefix === '/zh-tw' ? '所有文章' : '所有文章') : 'All Posts', link: `${prefix}/blog/` },
+        { text: prefix ? (prefix === '/zh-tw' ? '標籤' : '标签') : 'Tags', link: `${prefix}/blog/tags/` },
+        { text: prefix ? (prefix === '/zh-tw' ? '分類' : '分类') : 'Categories', link: `${prefix}/blog/categories/` },
+      ],
+    },
+  ]
+}
+
 export default defineConfig({
-  title: "Nexus Docs",
-  description: "Your Documentation",
+  base: '/nexus-docs/',
+  title: 'NexusQuant Docs',
+  description: 'Multi-strategy crypto quantitative trading platform documentation',
   locales: {
     root: {
       label: 'English',
       lang: 'en',
-      title: 'Nexus Docs',
-      description: 'Your Documentation'
+      title: 'NexusQuant Docs',
+      description: 'Multi-strategy crypto quantitative trading platform documentation',
     },
     'zh-tw': {
       label: '繁體中文',
       lang: 'zh-TW',
-      title: 'Nexus 文檔',
-      description: '您的文檔',
-      link: '/zh-tw/'
+      title: 'NexusQuant 文件',
+      description: '多策略加密貨幣量化交易平台文件',
     },
     'zh-cn': {
       label: '简体中文',
       lang: 'zh-CN',
-      title: 'Nexus 文档',
-      description: '您的文档',
-      link: '/zh-cn/'
-    }
+      title: 'NexusQuant 文档',
+      description: '多策略加密货币量化交易平台文档',
+    },
   },
   themeConfig: {
     logo: '/logo.svg',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Getting Started', link: '/getting-started/quick-start' },
+      { text: 'Quick Start', link: '/getting-started/quick-start' },
+      { text: 'Strategies', link: '/strategies/funding-arbitrage' },
       { text: 'Blog', link: '/blog/' },
-      { text: '繁體中文', link: '/zh-tw/' },
-      { text: '简体中文', link: '/zh-cn/' }
     ],
     sidebar: {
-      '/': [
-        {
-          text: 'Getting Started',
-          collapsed: false,
-          items: [
-            { text: 'Quick Start', link: '/getting-started/quick-start' },
-            { text: 'Installation', link: '/registeration/registration' }
-          ]
-        },
-        {
-          text: 'CEX',
-          collapsed: false,
-          items: [
-            { text: 'Binance', link: '/cex/binance' },
-            { text: 'Coinbase', link: '/cex/coinbase' },
-            { text: 'Bybit', link: '/cex/bybit' },
-            { text: 'OKX', link: '/cex/okx' },
-            { text: 'Bitget', link: '/cex/bitget' },
-            { text: 'Gate', link: '/cex/gate' },
-            { text: 'KuCoin', link: '/cex/kucoin' },
-            { text: 'HTX', link: '/cex/htx' },
-            { text: 'MEXC', link: '/cex/mexc' }
-          ]
-        },
-        {
-          text: 'DEX',
-          collapsed: false,
-          items: [
-            { text: 'Backpack', link: '/dex/backpack' },
-            { text: 'Blofin', link: '/dex/blofin' },
-            { text: 'Hyperliquid', link: '/dex/hyperliquid' },
-            { text: 'Lighter', link: '/dex/lighter' },
-            { text: 'Pacifica', link: '/dex/pacifica' },
-            { text: 'Paradex', link: '/dex/paradex' },
-            { text: 'StandX', link: '/dex/standx' },
-            { text: 'Aster', link: '/dex/aster' },
-            { text: 'Extended', link: '/dex/extended' },
-            { text: 'Apex Omni', link: '/dex/apex-omni' }
-          ]
-        },
-        {
-          text: 'Other',
-          collapsed: false,
-          items: [
-            { text: 'Settings Page', link: '/other/settings-page' },
-            { text: 'Trading Page', link: '/other/trading-page' },
-            { text: 'Order Operations', link: '/other/order-operations' },
-            { text: 'Risk Warning', link: '/other/risk-warning' },
-            { text: 'FAQ', link: '/other/faq' }
-          ]
-        },
-        {
-          text: 'Blog',
-          collapsed: false,
-          items: [
-            { text: 'All Posts', link: '/blog/' },
-            { text: 'Tags', link: '/blog/tags/' },
-            { text: 'Categories', link: '/blog/categories/' }
-          ]
-        }
-      ],
-      '/zh-tw/': [
-        {
-          text: '開始使用',
-          collapsed: false,
-          items: [
-            { text: '快速開始', link: '/zh-tw/getting-started/quick-start' },
-            { text: '安裝部署', link: '/zh-tw/registeration/registration' }
-          ]
-        },
-        {
-          text: 'CEX',
-          collapsed: false,
-          items: [
-            { text: 'Binance', link: '/zh-tw/cex/binance' },
-            { text: 'Coinbase', link: '/zh-tw/cex/coinbase' },
-            { text: 'Bybit', link: '/zh-tw/cex/bybit' },
-            { text: 'OKX', link: '/zh-tw/cex/okx' },
-            { text: 'Bitget', link: '/zh-tw/cex/bitget' },
-            { text: 'Gate', link: '/zh-tw/cex/gate' },
-            { text: 'KuCoin', link: '/zh-tw/cex/kucoin' },
-            { text: 'HTX', link: '/zh-tw/cex/htx' },
-            { text: 'MEXC', link: '/zh-tw/cex/mexc' }
-          ]
-        },
-        {
-          text: 'DEX',
-          collapsed: false,
-          items: [
-            { text: 'Backpack', link: '/zh-tw/dex/backpack' },
-            { text: 'Blofin', link: '/zh-tw/dex/blofin' },
-            { text: 'Hyperliquid', link: '/zh-tw/dex/hyperliquid' },
-            { text: 'Lighter', link: '/zh-tw/dex/lighter' },
-            { text: 'Pacifica', link: '/zh-tw/dex/pacifica' },
-            { text: 'Paradex', link: '/zh-tw/dex/paradex' },
-            { text: 'StandX', link: '/zh-tw/dex/standx' },
-            { text: 'Aster', link: '/zh-tw/dex/aster' },
-            { text: 'Extended', link: '/zh-tw/dex/extended' },
-            { text: 'Apex Omni', link: '/zh-tw/dex/apex-omni' }
-          ]
-        },
-        {
-          text: '其他',
-          collapsed: false,
-          items: [
-            { text: '設置頁面', link: '/zh-tw/other/settings-page' },
-            { text: '交易頁面', link: '/zh-tw/other/trading-page' },
-            { text: '下單操作', link: '/zh-tw/other/order-operations' },
-            { text: '風險提示', link: '/zh-tw/other/risk-warning' },
-            { text: '常見問題', link: '/zh-tw/other/faq' }
-          ]
-        },
-        {
-          text: '部落格',
-          collapsed: false,
-          items: [
-            { text: '所有文章', link: '/zh-tw/blog/' },
-            { text: '標籤', link: '/zh-tw/blog/tags/' },
-            { text: '分類', link: '/zh-tw/blog/categories/' }
-          ]
-        }
-      ],
-      '/zh-cn/': [
-        {
-          text: '开始使用',
-          collapsed: false,
-          items: [
-            { text: '快速开始', link: '/zh-cn/getting-started/quick-start' },
-            { text: '安装部署', link: '/zh-cn/registeration/registration' }
-          ]
-        },
-        {
-          text: 'CEX',
-          collapsed: false,
-          items: [
-            { text: 'Binance', link: '/zh-cn/cex/binance' },
-            { text: 'Coinbase', link: '/zh-cn/cex/coinbase' },
-            { text: 'Bybit', link: '/zh-cn/cex/bybit' },
-            { text: 'OKX', link: '/zh-cn/cex/okx' },
-            { text: 'Bitget', link: '/zh-cn/cex/bitget' },
-            { text: 'Gate', link: '/zh-cn/cex/gate' },
-            { text: 'KuCoin', link: '/zh-cn/cex/kucoin' },
-            { text: 'HTX', link: '/zh-cn/cex/htx' },
-            { text: 'MEXC', link: '/zh-cn/cex/mexc' }
-          ]
-        },
-        {
-          text: 'DEX',
-          collapsed: false,
-          items: [
-            { text: 'Backpack', link: '/zh-cn/dex/backpack' },
-            { text: 'Blofin', link: '/zh-cn/dex/blofin' },
-            { text: 'Hyperliquid', link: '/zh-cn/dex/hyperliquid' },
-            { text: 'Lighter', link: '/zh-cn/dex/lighter' },
-            { text: 'Pacifica', link: '/zh-cn/dex/pacifica' },
-            { text: 'Paradex', link: '/zh-cn/dex/paradex' },
-            { text: 'StandX', link: '/zh-cn/dex/standx' },
-            { text: 'Aster', link: '/zh-cn/dex/aster' },
-            { text: 'Extended', link: '/zh-cn/dex/extended' },
-            { text: 'Apex Omni', link: '/zh-cn/dex/apex-omni' }
-          ]
-        },
-        {
-          text: '其他',
-          collapsed: false,
-          items: [
-            { text: '设置页面', link: '/zh-cn/other/settings-page' },
-            { text: '交易页面', link: '/zh-cn/other/trading-page' },
-            { text: '下单操作', link: '/zh-cn/other/order-operations' },
-            { text: '风险提示', link: '/zh-cn/other/risk-warning' },
-            { text: '常见问题', link: '/zh-cn/other/faq' }
-          ]
-        },
-        {
-          text: '博客',
-          collapsed: false,
-          items: [
-            { text: '所有文章', link: '/zh-cn/blog/' },
-            { text: '标签', link: '/zh-cn/blog/tags/' },
-            { text: '分类', link: '/zh-cn/blog/categories/' }
-          ]
-        }
-      ]
+      '/': makeSidebar(),
+      '/zh-tw/': makeSidebar('/zh-tw'),
+      '/zh-cn/': makeSidebar('/zh-cn'),
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-repo' }
+      { icon: 'github', link: 'https://github.com/nexus-quant-lab/nexus-docs' },
     ],
     footer: {
       message: 'Released under the CC BY-NC-ND 4.0 License.',
-      copyright: 'Copyright © 2025'
+      copyright: 'Copyright © 2025-2026 NexusQuant',
     },
     outline: {
-      level: [2, 3]
-    }
-  }
+      level: [2, 3],
+    },
+  },
 })
