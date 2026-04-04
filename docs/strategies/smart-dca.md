@@ -65,10 +65,10 @@ The ahr999 value is updated in real-time on your dashboard.
 
 In the **Smart DCA** dashboard, you can see:
 - Total invested amount
-- Current BTC holdings
+- DCA BTC accumulated
 - Average buy price vs. current price
 - Unrealized P&L
-- ahr999 historical chart with your buy points marked
+- Buy count
 
 ## Tips
 
