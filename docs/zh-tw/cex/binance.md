@@ -26,14 +26,34 @@
     - 已啟用雙重身份驗證 (2FA，如 Google 驗證器 / 簡訊)。
     - 已完成身份認證 (KYC)。
 3. 點擊右上角個人資料圖示 → **API 管理**。
+
+![Binance API 管理入口](/images/exchanges/binance-api-management.png)
+
 4. 點擊 **建立 API**。
+
+![Binance 建立 API 按鈕](/images/exchanges/binance-create-api.png)
 5. 輸入標籤名稱 (例如：`prod-spot`、`prod-futures`)。
 6. 完成安全驗證。
 7. 儲存 **API Key** 和 **Secret** (Secret 僅顯示一次)。
+
+![Binance API Key 和 Secret](/images/exchanges/binance-api-key-secret.png)
+
 8. 設定權限：
     - 根據需求勾選「啟用現貨及槓桿交易」。
     - 根據需求勾選「啟用合約」。
     - 設定 IP 白名單 (強烈建議)。
+
+![Binance API 權限設定](/images/exchanges/binance-api-permissions.png)
+
+### 加入 NexusQuant
+
+1. 前往 NexusQuant **交易所** 頁面
+2. 點擊 **新增交易所**，選擇 **Binance**
+3. 貼上 API Key 和 Secret
+4. 點擊 **儲存**
+5. 點擊 `⟳` 測試連線 — 建議延遲低於 150ms
+
+![NexusQuant 新增 Binance](/images/exchanges/nexusquant-add-binance.png)
 
 ------------------------------------------------------------------------
 

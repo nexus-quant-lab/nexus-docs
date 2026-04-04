@@ -48,6 +48,8 @@ ahr999 值越低，代表比特幣相對於歷史均值**越便宜**。
 
 4. 點擊**啟動策略**
 
+![智能定投設定頁面](/images/strategies/nexusquant-dca-setup.png)
+
 ## ahr999 計算方式
 
 平台自動獲取以下數據：
@@ -70,6 +72,8 @@ NexusQuant 內建滑價保護機制。
 - 滑價超過門檻時自動取消訂單
 
 ## 查看績效
+
+![智能定投儀表板](/images/strategies/nexusquant-dca-dashboard.png)
 
 在**智能定投**儀表板中，你可以看到：
 - 累計投入金額

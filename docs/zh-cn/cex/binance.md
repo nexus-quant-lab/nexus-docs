@@ -26,14 +26,34 @@
     - 已启用双重身份验证 (2FA，如 Google 验证器 / 短信)。
     - 已完成身份认证 (KYC)。
 3. 点击右上角个人资料图标 → **API 管理**。
+
+![Binance API 管理入口](/images/exchanges/binance-api-management.png)
+
 4. 点击 **创建 API**。
+
+![Binance 创建 API 按钮](/images/exchanges/binance-create-api.png)
 5. 输入标签名称 (例如：`prod-spot`、`prod-futures`)。
 6. 完成安全验证。
 7. 保存 **API Key** 和 **Secret** (Secret 仅显示一次)。
+
+![Binance API Key 和 Secret](/images/exchanges/binance-api-key-secret.png)
+
 8. 设置权限：
     - 根据需要勾选“启用现货及杠杆交易”。
     - 根据需要勾选“启用合约”。
     - 设置 IP 白名单 (强烈建议)。
+
+![Binance API 权限设置](/images/exchanges/binance-api-permissions.png)
+
+### 添加到 NexusQuant
+
+1. 前往 NexusQuant **交易所** 页面
+2. 点击 **添加交易所**，选择 **Binance**
+3. 粘贴 API Key 和 Secret
+4. 点击 **保存**
+5. 点击 `⟳` 测试连接 — 建议延迟低于 150ms
+
+![NexusQuant 添加 Binance](/images/exchanges/nexusquant-add-binance.png)
 
 ------------------------------------------------------------------------
 

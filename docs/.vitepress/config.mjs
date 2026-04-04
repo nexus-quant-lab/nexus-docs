@@ -66,8 +66,8 @@ function makeSidebar (prefix = '') {
       text: prefix ? (prefix === '/zh-tw' ? '其他' : '其他') : 'Other',
       collapsed: true,
       items: [
-        { text: prefix ? (prefix === '/zh-tw' ? '設定頁面' : '设置页面') : 'Settings Page', link: `${prefix}/other/settings-page` },
-        { text: prefix ? (prefix === '/zh-tw' ? '交易頁面' : '交易页面') : 'Trading Page', link: `${prefix}/other/trading-page` },
+        { text: prefix ? (prefix === '/zh-tw' ? '設定說明' : '设置说明') : 'Settings', link: `${prefix}/other/settings-page` },
+        { text: prefix ? (prefix === '/zh-tw' ? '持倉與交易記錄' : '持仓与交易记录') : 'Positions & Trades', link: `${prefix}/other/trading-page` },
         { text: prefix ? (prefix === '/zh-tw' ? '下單操作' : '下单操作') : 'Order Operations', link: `${prefix}/other/order-operations` },
         { text: prefix ? (prefix === '/zh-tw' ? '風險提示' : '风险提示') : 'Risk Warning', link: `${prefix}/other/risk-warning` },
         { text: prefix ? (prefix === '/zh-tw' ? '常見問題' : '常见问题') : 'FAQ', link: `${prefix}/other/faq` },

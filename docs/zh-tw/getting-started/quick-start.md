@@ -15,6 +15,8 @@
 3. 填入 **API Key** 和 **Secret**
 4. 點擊 **儲存**，然後用 `⟳` 按鈕測試連線延遲
 
+![NexusQuant 交易所配置頁面](/images/getting-started/exchange-config.png)
+
 ::: warning API Key 安全提醒
 - 在交易所端 **開啟 IP 白名單**
 - **只開啟交易權限** — 絕對不要開啟提幣權限

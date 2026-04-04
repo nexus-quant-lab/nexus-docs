@@ -48,6 +48,8 @@ If your base DCA amount is **$100/week**:
 
 4. Click **Start Strategy**
 
+![Smart DCA setup page](/images/strategies/nexusquant-dca-setup.png)
+
 ## How NexusQuant Calculates ahr999
 
 The platform automatically fetches:
@@ -70,6 +72,8 @@ When placing buy orders, the system:
 - Cancels the order if slippage exceeds the threshold
 
 ## Viewing Performance
+
+![Smart DCA dashboard](/images/strategies/nexusquant-dca-dashboard.png)
 
 In the **Smart DCA** dashboard, you can see:
 - Total invested amount

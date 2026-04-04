@@ -24,20 +24,17 @@ These are real API keys used for live trading in Spot and Futures accounts.
 2. Ensure **2FA** is enabled and **identity verification** is complete
 3. Click profile icon (top right) → **API Management**
 
-<!-- TODO: Screenshot — Binance profile menu showing "API Management" option -->
-<!-- Save as: docs/public/images/exchanges/binance-api-management.png -->
+![Binance API Management menu](/images/exchanges/binance-api-management.png)
 
 4. Click **Create API**
 
-<!-- TODO: Screenshot — Binance "Create API" button -->
-<!-- Save as: docs/public/images/exchanges/binance-create-api.png -->
+![Binance Create API button](/images/exchanges/binance-create-api.png)
 
 5. Enter a label (e.g., `nexusquant-prod`)
 6. Complete security verification (2FA)
 7. Save the **API Key** and **Secret** (Secret is shown only once!)
 
-<!-- TODO: Screenshot — Binance API Key and Secret display (blur the actual values) -->
-<!-- Save as: docs/public/images/exchanges/binance-api-key-secret.png -->
+![Binance API Key and Secret](/images/exchanges/binance-api-key-secret.png)
 
 8. Set permissions:
    - ✅ Enable **Spot & Margin Trading**
@@ -45,8 +42,7 @@ These are real API keys used for live trading in Spot and Futures accounts.
    - ✅ Set **IP whitelist** (recommended)
    - ❌ Do NOT enable **Withdrawals**
 
-<!-- TODO: Screenshot — Binance API permissions checkboxes -->
-<!-- Save as: docs/public/images/exchanges/binance-api-permissions.png -->
+![Binance API permissions](/images/exchanges/binance-api-permissions.png)
 
 ### Add to NexusQuant
 
@@ -56,8 +52,7 @@ These are real API keys used for live trading in Spot and Futures accounts.
 4. Click **Save**
 5. Click `⟳` to test the connection — aim for < 150ms latency
 
-<!-- TODO: Screenshot — NexusQuant exchange configuration page with Binance selected -->
-<!-- Save as: docs/public/images/exchanges/nexusquant-add-binance.png -->
+![NexusQuant add Binance](/images/exchanges/nexusquant-add-binance.png)
 
 ---
 

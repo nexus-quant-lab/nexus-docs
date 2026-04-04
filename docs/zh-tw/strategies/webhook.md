@@ -17,6 +17,8 @@
 2. 複製你的 Webhook URL（格式：`https://api.nexusquant.io/api/v1/webhook/signal`）
 3. 記下你的 **passphrase**（用於安全驗證）
 
+![NexusQuant Webhook URL 和 passphrase](/images/strategies/nexusquant-webhook-url.png)
+
 ### 步驟二：建立 TradingView 警報
 
 1. 開啟 TradingView，設定你的圖表/指標
@@ -25,6 +27,10 @@
 4. 在**通知**分頁，勾選 **Webhook URL**
 5. 貼上 NexusQuant 的 webhook URL
 6. 在**訊息**欄位，輸入 JSON 格式的訊號內容（見下方）
+
+![TradingView 警報 Webhook URL 欄位](/images/strategies/tradingview-alert-webhook.png)
+
+![TradingView 警報 JSON 訊息](/images/strategies/tradingview-alert-json.png)
 
 ### 步驟三：設定 JSON 訊號格式
 
@@ -107,6 +113,49 @@
 ::: tip
 請確認 `symbol` 格式與 NexusQuant 要求的一致。例如使用 `BTC/USDT` 而非 `BTCUSDT`。你可能需要調整 <code v-pre>{{ticker}}</code> 變數的格式。
 :::
+
+## 止損與止盈（SL/TP）
+
+NexusQuant 支援在 Webhook 策略上自動掛出 SL/TP 保護單。啟用後，開倉完成後會立即掛出保護訂單。
+
+### 如何啟用
+
+建立或編輯 Webhook 策略時，開啟 **啟用 SL/TP** 並設定：
+
+![Webhook 策略 SL/TP 設定](/images/strategies/nexusquant-webhook-sltp.png)
+
+| 參數 | 說明 | 範例 |
+|------|------|------|
+| 止損 % | 價格反向移動達此百分比時平倉 | 3.0（= -3%） |
+| 止盈 % | 價格順向移動達此百分比時平倉 | 5.0（= +5%） |
+
+### 運作方式
+
+- **止損**：掛出條件單（觸發單）。當價格觸及止損位時，以市價平倉。
+- **止盈**：在目標獲利價位掛出限價單。
+- 兩者皆使用 `reduceOnly` 模式 — 只會平倉，不會反向開倉。
+- SL/TP 價格根據進場價和設定的百分比自動計算。
+
+### 範例
+
+以 $100,000 開 **多倉**，止損 = 3%、止盈 = 5%：
+- 止損觸發於 **$97,000**（市價賣出）
+- 止盈掛單於 **$105,000**（限價賣出）
+
+::: tip
+強烈建議自動化策略啟用 SL/TP。未啟用時，持倉會一直保持到下一個訊號或手動操作。
+:::
+
+## 支援的動作
+
+除了 `buy`、`sell` 和 `close`，合約交易還支援以下動作：
+
+| 動作 | 行為 |
+|------|------|
+| `long` | 開合約多倉 |
+| `short` | 開合約空倉 |
+| `close_long` | 僅平多倉 |
+| `close_short` | 僅平空倉 |
 
 ## 安全機制
 

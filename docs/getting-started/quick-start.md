@@ -15,8 +15,7 @@ Get up and running with NexusQuant in 3 steps.
 3. Enter your **API Key** and **Secret**
 4. Click **Save**, then use the `⟳` button to test connectivity
 
-<!-- TODO: Screenshot — NexusQuant exchange configuration page -->
-<!-- Save as: docs/public/images/getting-started/exchange-config.png -->
+![NexusQuant exchange configuration page](/images/getting-started/exchange-config.png)
 
 ::: warning API Key Security
 - **Enable IP whitelist** on the exchange side for your API key

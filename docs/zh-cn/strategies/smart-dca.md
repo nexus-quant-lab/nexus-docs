@@ -48,6 +48,8 @@ ahr999 值越低，代表比特币相对于历史均值**越便宜**。
 
 4. 点击**启动策略**
 
+![智能定投设置页面](/images/strategies/nexusquant-dca-setup.png)
+
 ## ahr999 计算方式
 
 平台自动获取以下数据：
@@ -70,6 +72,8 @@ NexusQuant 内建滑价保护机制。
 - 滑价超过门槛时自动取消订单
 
 ## 查看绩效
+
+![智能定投仪表盘](/images/strategies/nexusquant-dca-dashboard.png)
 
 在**智能定投**仪表板中，你可以看到：
 - 累计投入金额
