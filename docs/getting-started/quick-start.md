@@ -10,7 +10,7 @@ Get up and running with NexusQuant in 3 steps.
 
 ## Step 2: Connect an Exchange
 
-1. Navigate to **Settings** → **Exchange Configuration**
+1. Navigate to the **Exchanges** page from the sidebar menu
 2. Select your exchange (e.g., Binance, OKX, Bybit)
 3. Enter your **API Key** and **Secret**
 4. Click **Save**, then use the `⟳` button to test connectivity

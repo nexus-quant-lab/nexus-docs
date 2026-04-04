@@ -10,20 +10,23 @@ The ahr999 indicator measures Bitcoin's current price relative to:
 
 A lower ahr999 value means Bitcoin is **relatively cheap** compared to historical norms.
 
-## Investment Zones
+## Investment Multipliers
 
-| ahr999 Value | Zone | Action | Multiplier |
+Instead of fixed amounts, NexusQuant uses a **dynamic linear multiplier** to optimize your entry price:
+
+| ahr999 Value | Zone | Action | Multiplier (min to max) |
 |-------------|------|--------|------------|
-| < 0.45 | Bottom-fishing | Aggressive buy | 3x base amount |
-| 0.45 - 1.2 | DCA zone | Normal buy | 1x base amount |
-| > 1.2 | Overvalued | Stop buying | 0x (hold/observe) |
+| < 0.45 | Bottom-fishing | Aggressive buy | **1.5x to 5.0x** |
+| 0.45 - 1.2 | DCA zone | Normal buy | **0.5x to 1.5x** |
+| > 1.2 | Overvalued | Stop buying | **0x** (hold/observe) |
 
-### Example
+### How it works
+The system automatically calculates the multiplier based on the exact ahr999 value:
+- **At ahr999 = 0.0**: The multiplier is **5.0x** (maximum bottom-fishing).
+- **At ahr999 = 0.45**: The multiplier is **1.5x** (transition between zones).
+- **At ahr999 = 1.2**: The multiplier is **0.1x** (minimal buy before stopping).
 
-If your base DCA amount is **$100/week**:
-- ahr999 = 0.3 → Buy **$300** (bottom-fishing zone)
-- ahr999 = 0.8 → Buy **$100** (normal DCA zone)
-- ahr999 = 1.5 → Buy **$0** (wait, market overvalued)
+This ensures you buy significantly more when Bitcoin is deeply undervalued and gradually reduce your investment as it approaches the overvalued zone.
 
 ## Setup in NexusQuant
 

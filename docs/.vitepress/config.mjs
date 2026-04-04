@@ -39,7 +39,7 @@ function makeSidebar (prefix = '') {
       collapsed: false,
       items: [
         { text: prefix ? '快速開始' : 'Quick Start', link: `${prefix}/getting-started/quick-start` },
-        { text: prefix ? (prefix === '/zh-tw' ? '註冊帳號' : '注册账号') : 'Registration', link: `${prefix}/registeration/registration` },
+        { text: prefix ? (prefix === '/zh-tw' ? '註冊帳號' : '注册账号') : 'Registration', link: `${prefix}/registration/index` },
         { text: prefix ? (prefix === '/zh-tw' ? '交易所設定' : '交易所设定') : 'Exchange Setup', link: `${prefix}/exchange-setup` },
       ],
     },
@@ -66,6 +66,8 @@ function makeSidebar (prefix = '') {
       text: prefix ? (prefix === '/zh-tw' ? '其他' : '其他') : 'Other',
       collapsed: true,
       items: [
+        { text: prefix ? (prefix === '/zh-tw' ? '訂閱方案' : '订阅方案') : 'Subscription Plans', link: `${prefix}/other/subscription` },
+        { text: prefix ? (prefix === '/zh-tw' ? '推廣計畫' : '推广计划') : 'Affiliate Program', link: `${prefix}/other/affiliate` },
         { text: prefix ? (prefix === '/zh-tw' ? '設定說明' : '设置说明') : 'Settings', link: `${prefix}/other/settings-page` },
         { text: prefix ? (prefix === '/zh-tw' ? '持倉與交易記錄' : '持仓与交易记录') : 'Positions & Trades', link: `${prefix}/other/trading-page` },
         { text: prefix ? (prefix === '/zh-tw' ? '下單操作' : '下单操作') : 'Order Operations', link: `${prefix}/other/order-operations` },
