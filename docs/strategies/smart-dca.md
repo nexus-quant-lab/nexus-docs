@@ -59,18 +59,6 @@ The platform automatically fetches:
 
 The ahr999 value is updated in real-time on your dashboard.
 
-## Slippage Protection
-
-::: tip
-NexusQuant includes built-in slippage protection for DCA orders.
-:::
-
-When placing buy orders, the system:
-- Checks the **order book depth** before executing
-- Splits large orders if liquidity is thin
-- Sets a maximum slippage tolerance (configurable in settings)
-- Cancels the order if slippage exceeds the threshold
-
 ## Viewing Performance
 
 ![Smart DCA dashboard](/images/strategies/nexusquant-dca-dashboard.png)
