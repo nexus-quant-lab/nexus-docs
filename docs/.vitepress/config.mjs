@@ -39,7 +39,7 @@ function makeSidebar (prefix = '') {
       collapsed: false,
       items: [
         { text: prefix ? '快速開始' : 'Quick Start', link: `${prefix}/getting-started/quick-start` },
-        { text: prefix ? (prefix === '/zh-tw' ? '註冊帳號' : '注册账号') : 'Registration', link: `${prefix}/registration/index` },
+        { text: prefix ? (prefix === '/zh-tw' ? '註冊帳號' : '注册账号') : 'Registration', link: `${prefix}/registration/` },
         { text: prefix ? (prefix === '/zh-tw' ? '交易所設定' : '交易所设定') : 'Exchange Setup', link: `${prefix}/exchange-setup` },
       ],
     },
