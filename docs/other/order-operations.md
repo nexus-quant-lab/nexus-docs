@@ -50,10 +50,8 @@ Configure SL/TP percentages when creating or editing a Webhook strategy:
 
 ### Smart DCA Orders
 
-DCA orders are always **market buy** orders for BTC/USDT. The system includes slippage protection:
-- Checks order book depth before executing
-- Splits large orders if liquidity is thin
-- Cancels if slippage exceeds the configured threshold
+DCA orders are always **market buy** orders for BTC/USDT.
+
 
 ## Order Conflict Prevention
 

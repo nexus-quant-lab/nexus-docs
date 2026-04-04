@@ -22,8 +22,8 @@ features:
     details: Data-driven Bitcoin value investing. Automatically adjusts buy amounts based on the ahr999 indicator zones.
   - title: 9 CEX + 10 DEX Supported
     details: Binance, OKX, Bybit, Bitget, Hyperliquid, and more. One platform, all your exchanges.
-  - title: Risk Controls Built-in
-    details: Max position limits, slippage protection, emergency stop switch, and IP-whitelisted API key management.
+  - title: Multi-Exchange Support
+    details: Connect to 9+ CEXs and manage your assets in one place with IP-whitelisted API key management.
   - title: Real-time Monitoring
     details: Live dashboard with portfolio tracking, trade history, strategy performance, and Telegram notifications.
 ---

@@ -22,8 +22,8 @@ features:
     details: 數據驅動的比特幣價值投資。根據 ahr999 指標區間自動調整定投金額。
   - title: 支援 9 個 CEX + 10 個 DEX
     details: 幣安、OKX、Bybit、Bitget、Hyperliquid 等。一個平台管理所有交易所。
-  - title: 內建風險控制
-    details: 最大持倉限制、滑價保護、緊急停止開關、API Key IP 白名單管理。
+  - title: 支援多家交易所
+    details: 一個平台管理所有交易所資產，支援 API Key IP 白名單管理與多中心化/去中心化交易所。
   - title: 即時監控
     details: 即時儀表板，包含資產追蹤、交易歷史、策略績效與 Telegram 通知。
 ---

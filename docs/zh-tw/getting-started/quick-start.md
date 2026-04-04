@@ -83,5 +83,5 @@ NexusQuant 提供三大核心策略：
 ## 接下來
 
 - [交易所設定指南](/zh-tw/exchange-setup) — 各交易所 API Key 詳細設定步驟
-- [設定頁面](/zh-tw/other/settings-page) — 風控、通知等配置
+- [設定頁面](/zh-tw/other/settings-page) — 通知、介面與帳號設定
 - [常見問題](/zh-tw/other/faq) — 常見問題與疑難排解

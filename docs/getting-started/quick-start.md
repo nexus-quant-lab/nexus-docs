@@ -50,5 +50,5 @@ Data-driven Bitcoin value investing using the ahr999 indicator. Best for long-te
 ## What's Next?
 
 - [Exchange Setup Guides](/exchange-setup) — Detailed API key setup for each exchange
-- [Settings Page](/other/settings-page) — Configure risk controls, notifications, and more
+- [Settings Page](/other/settings-page) — Configure notifications, theme, and profile settings
 - [FAQ](/other/faq) — Common questions and troubleshooting
