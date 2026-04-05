@@ -48,7 +48,15 @@
 ### 可編輯欄位
 
 - **電子信箱** — 更新你的電子郵件地址
-- **Telegram Chat ID** — 輸入你的 Telegram Chat ID 以接收交易通知
+- **Telegram Chat ID** — 輸入你的 Telegram Chat ID 以接收交易與策略執行通知。
+
+::: tip 如何設定 Telegram 通知？
+1. 在 Telegram 搜尋並點擊官方機器人 [@nexus_quant_message_bot](https://t.me/nexus_quant_message_bot) (範例名稱)
+2. **務必先點擊「Start」或傳送任何訊息給機器人**，否則系統將無法主動發送通知給你。
+3. 取得你的 `Chat ID` 並填入此處。
+:::
+
+![Telegram 通知設定與 Chat ID 填寫](/images/settings/nexusquant-telegram-setup.png)
 
 ### 密碼管理
 

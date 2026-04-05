@@ -48,7 +48,15 @@ Navigate to **Profile** to manage your account information.
 ### Editable Fields
 
 - **Email** — Update your email address
-- **Telegram Chat ID** — Enter your Telegram chat ID to receive trade notifications
+- **Telegram Chat ID** — Enter your Telegram chat ID to receive trade and strategy execution notifications.
+
+::: tip How to setup Telegram notifications?
+1. Search and click the official bot on Telegram [@nexus_quant_message_bot](https://t.me/nexus_quant_message_bot) (Example name)
+2. **Make sure to click "Start" or send any message to the bot first**, otherwise the system will not be able to proactively send notifications to you.
+3. Get your `Chat ID` and fill it in here.
+:::
+
+![Telegram Notification Settings and Chat ID](/images/settings/nexusquant-telegram-setup.png)
 
 ### Password Management
 

@@ -51,6 +51,8 @@
 | 14 | `images/dashboard/nexusquant-dashboard.png` | Dashboard：6 個統計卡片 + NAV 曲線 | `/dashboard` |
 | 16 | `images/trading/nexusquant-positions.png` | 持倉頁面：統計卡片 + 持倉表格 | `/positions` |
 | 17 | `images/trading/nexusquant-trades.png` | 交易記錄：篩選列 + 歷史表格 | `/trades` |
+| 26 | `images/strategies/nexusquant-funding-history.png` | 資金費率套利：歷史趨勢圖表與數據分析 | `/funding-arbitrage` → 點擊圖表圖示 |
+| 27 | `images/settings/nexusquant-telegram-setup.png` | 個人資料：Telegram Chat ID 輸入框與說明 | `/profile` |
 | 18 | `images/settings/nexusquant-exchanges-list.png` | 交易所列表（有卡片、延遲數值） | `/exchanges` |
 | 20 | `images/settings/nexusquant-subscription.png` | 訂閱方案：月 vs 年卡片 + 付款按鈕 | `/subscription` |
 | 21 | `images/auth/nexusquant-register.png` | 註冊頁面表單 | `/auth/register` |

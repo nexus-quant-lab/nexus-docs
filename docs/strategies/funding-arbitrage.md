@@ -15,6 +15,18 @@ Since you hold equal long and short positions, price movements cancel out — yo
 
 Funding rates are positive when the market is **bullish** — traders are paying a premium to hold long perpetual positions. As the arbitrageur, you collect this premium by being short on perps while hedging with a spot long.
 
+## Core Advantages of NexusQuant
+
+### Visualized Historical Data Analysis
+NexusQuant provides powerful **Funding Rate Historical Charts**, allowing you to make more informed decisions:
+- **Historical Rate Trends**: View rate fluctuations from the past 12 hours to 7 days, helping you avoid entering positions when rates are about to drop.
+- **Spread Analysis**: Visualize the rate difference between different exchanges to identify the most stable and profitable hedging pairs at a glance.
+- **Key Data Summaries**: Automatically calculate average spread, max/min spread, and volatility to help you assess strategy stability.
+
+This allows you to move beyond simply "looking at numbers" to "analyzing trends," significantly reducing the risk of being stuck in positions when rates turn negative.
+
+![Funding Rate History and Spread Analysis Chart](/images/strategies/nexusquant-funding-history.png)
+
 ## Setup in NexusQuant
 
 ### Prerequisites
