@@ -69,31 +69,9 @@ Navigate to **Profile** to manage your account information.
 - Subscription tier (Free / Pro)
 - Account creation date
 
-## Subscription
+## Subscription & Affiliate
 
-![Subscription page](/images/settings/nexusquant-subscription.png)
+NexusQuant offers flexible subscription plans and an attractive affiliate program.
 
-Navigate to **Subscription** to view or upgrade your plan.
-
-### Available Plans
-
-| | Free | Pro Monthly | Pro Yearly |
-|---|------|------------|------------|
-| Price | $0 | $29 USDT/mo | $290 USDT/yr (save ~17%) |
-| Exchanges | 1 | Unlimited | Unlimited |
-| Strategies | 1 per type | Unlimited | Unlimited |
-| Webhook Automation | Basic | Full (SL/TP, templates) | Full (SL/TP, templates) |
-| Smart DCA | View only | Auto-execute | Auto-execute |
-
-### Payment
-
-NexusQuant accepts cryptocurrency payments via NOWPayments, supporting 350+ cryptocurrencies.
-
-1. Select a plan (Monthly or Yearly)
-2. Click **Pay with Crypto**
-3. Complete payment on the NOWPayments checkout page
-4. Your subscription activates automatically after confirmation
-
-::: info Referral Discount
-Users who registered with a referral code receive **10% off** their first subscription.
-:::
+- [Detailed Subscription Plans](./subscription) — Compare Free and Pro features and learn how to subscribe.
+- [Affiliate Program](./affiliate) — Share NexusQuant and earn USDT commissions.
